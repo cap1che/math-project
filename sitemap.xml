@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+    <loc>https://figmath.net/</loc>
+    <priority>1.0</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/about%20page.html</loc>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/encryption/encryption%20website.html</loc>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/encryption/encryption%20demo.html</loc>
+    <priority>0.7</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/encryption/learn%20more.html</loc>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/encryption/encryption%20challenge.html</loc>
+    <priority>0.4</priority>
+</url>
+
+<url>
+    <loc>https://figmath.net/html%20git/coming%20soon.html</loc>
+    <priority>0.1</priority>
+</url>
