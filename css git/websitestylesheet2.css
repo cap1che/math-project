@@ -397,7 +397,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 5%;
 }
 #plright {
