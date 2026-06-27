@@ -47,8 +47,17 @@ function geteInput() {
     elist.length=0;
     dlist.length=0;
 
+
+    if (
+        !document.getElementById("pvalue").value ||
+        !document.getElementById("qvalue").value ||
+        !document.getElementById("plaintext").value
+    ) {
+        return false;
+    }
     let p = Number(document.getElementById("pvalue").value);
     let q = Number(document.getElementById("qvalue").value);
+    let text = document.getElementById("plaintext").value;
     N = p*q;
 
 
@@ -66,6 +75,9 @@ function geteInput() {
         }
     }
     e = list[0]
+    if (list.length === 0) {
+        return;
+    }
     let k = 0
     d = 0
 
@@ -76,10 +88,7 @@ function geteInput() {
     let ekey = [e, N]
     let dkey = [d, N]
     let charlist = []
-    
 
-
-    let text = document.getElementById("plaintext").value;
     for (let i = 0; i < text.length; i++) {
         let h = BigInt(text.codePointAt(i))
         charlist.push(h)
@@ -103,6 +112,7 @@ function geteInput() {
             }
         }
     displaytext();
+    return true
     }
 
 function attemptsInput() {
@@ -116,6 +126,14 @@ function attemptsInput() {
         attempts += 1
     }
     document.getElementById("attempts").textContent = String(attempts)
+    let attemptstext;
+    if (attempts == 1) {
+        attemptstext = "attempt to guess the key using Fermat's factorisation method"
+    }
+    else {
+        attemptstext = "attempts to guess the key using Fermat's factorisation method"
+    }
+    document.getElementById("option1").textContent = attemptstext
 }
 
 function spamattemptsInput() {
@@ -130,6 +148,14 @@ function spamattemptsInput() {
         }
     }
     document.getElementById("spamattempts").textContent = String(attempts)
+    let spamtext;
+    if (attempts == 1) {
+        spamtext = "attempt to guess the key using brute force of prime factorisation"
+    }
+    else {
+        spamtext = "attempts to guess the key using brute force of prime factorisation"
+    }
+    document.getElementById("option2").textContent = spamtext    
 }
 
 function animateBar(barid, n) {
@@ -255,7 +281,6 @@ let mathfact = [
     "-40 Celsius is equal to -40 Fahrenheit",
     "'eleven plus two' is an anagram of 'twelve plus one'",
     "6 is the first perfect number, equal to the sum of its divisors",
-    "by induction, contradiction, and exhaustion, the cake is not true, do not listen to it"
 ]
 let randomfactnumber = Math.floor(Math.random() * mathfact.length)
 let randomfact = mathfact[randomfactnumber]
